@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   get 'views/new' => 'views#new'
   post 'views' => 'views#create'
   get '/media/:id' => 'media#show'
+  get 'signup' => 'users#new'
+  resources :users
+  post '/signup' => 'users#create'
+  
 end
