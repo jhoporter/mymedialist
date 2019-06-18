@@ -1,4 +1,6 @@
 class MediaController < ApplicationController
+  before_action :require_user, only: [:index, :show]
+
   def index
     @media = Medium.all
   end
