@@ -12,6 +12,6 @@ class MediaController < ApplicationController
   private
 
   def show_params
-    params.require(:medium).permit(:id)
+    params.permit(:id)
   end
 end
