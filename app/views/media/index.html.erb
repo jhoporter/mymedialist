@@ -1,4 +1,5 @@
 <% @media.each do |medium| %>
   <%= medium.title %>
   <%= medium.release_year %>
+  <%= image_tag medium.image, style: 'height:250px' %>
 <% end %>
