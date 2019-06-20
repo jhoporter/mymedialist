@@ -13,3 +13,118 @@
  *= require_tree .
  *= require_self
  */
+ *:focus {
+   box-shadow: none;
+ }
+
+ * {
+   box-sizing: border-box;
+ }
+
+.title {
+  color: blue;
+  font-size: 20px;
+  display: inline;
+}
+
+.rectangle {
+  display: inline-block;
+}
+
+a:visited {
+  color: red;
+  text-decoration: none;
+}
+
+
+.navigation {
+  width: 1230px;
+  text-align: right;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0 auto;
+  display: inline;
+  float: right;
+}
+
+.nav li {
+  color: red;
+  list-style: none;
+  padding: 0 10px;
+  display: inline;
+}
+
+.nav a {
+  text-decoration: none;
+}
+
+.signupform {
+  width: 100%;
+  top: 200px;
+  text-align: center;
+  position: relative;
+}
+
+input {
+  line-height: 40px;
+  font-size: 20px;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+
+}
+
+input:focus {
+  border: 0px solid #f00;
+  border-bottom: 2px solid #16a085;
+  width: 300px;
+  box-shadow: none;
+  outline: none;
+}
+
+.signupdiv {
+  height: 70px;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+}
+
+::placeholder {
+  font-size: 20px;
+}
+
+textarea:focus, input:focus, select:focus {
+  box-shadow: none;
+  font-size: 20px;
+}
+
+:placeholder-shown {
+  line-height: 40px;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #AAA;
+}
+
+:placeholder-shown:focus {
+  border: none;
+  border-bottom: 2px solid #16a085
+}
+
+.mediumbox {
+  display: inline-block;
+  border: none;
+  padding: 2px;
+  width: 200px;
+  text-align: center;
+}
+
+.titleyear {
+
+}
+
+.mediumimage {
+
+}
