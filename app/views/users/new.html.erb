@@ -1,7 +1,11 @@
-<div class="signupform">
-  <div class="signupdiv"><input type="text" name="first_name" placeholder="First Name" /></div>
-  <div class="signupdiv"><input type="text" name="last_name" placeholder="Last Name" /></div>
-  <div class="signupdiv"><input type="text" name="email" placeholder="Email" /></div>
-  <div class="signupdiv"><input type="password" name="username" placeholder="Password" /></div>
-  <div><input type="submit" name="signup_submit" value="Create an account" /></div>
+<div class="signupbg">
+  <div class="signupform">
+    <%= form_for(@user) do |f| %>
+     <div class="signupdiv"><%= f.text_field :first_name, :placeholder => "First name" %></div>
+     <div class="signupdiv"><%= f.text_field :last_name, :placeholder => "Last name" %></div>
+     <div class="signupdiv"><%= f.email_field :email, :placeholder => "Email" %></div>
+     <div class="signupdiv"><%= f.password_field :password, :placeholder => "Password" %></div>
+     <div class="signupdiv"><%= f.submit "Create an account", class: "button" %></div>
+   <% end %>
+  </div>
 </div>

@@ -60,12 +60,30 @@ a:visited {
   text-decoration: none;
 }
 
-.signupform {
-  width: 100%;
-  top: 200px;
-  text-align: center;
+.signupbg {
   position: relative;
+  top: 180px;
+  height:400px;
+  width:380px;
+  background: #fff;
+  background-size:cover;
+  margin-left:auto;
+  margin-right:auto;
+  border-radius: 10px;
+  box-shadow: 3px 3px 4px 2px rgba(0, 0, 0, 0.4)
 }
+
+
+.signupform {
+  position: relative;
+  width: 100%;
+  top: 15px;
+  text-align: center;
+  vertical-align: center;
+  margin-left:auto;
+  margin-right:auto;
+}
+
 
 input {
   line-height: 40px;
@@ -78,7 +96,7 @@ input {
 
 input:focus {
   border: 0px solid #f00;
-  border-bottom: 2px solid #16a085;
+  border-bottom: 2px solid #179A96;
   width: 300px;
   box-shadow: none;
   outline: none;
@@ -112,6 +130,20 @@ textarea:focus, input:focus, select:focus {
   border: none;
   border-bottom: 2px solid #16a085
 }
+
+.button {
+  height:55px;
+  border-radius:20px;
+  border:rgba(0,0,0,.3) 0px solid;
+  vertical-align: center;
+  background:#179A96;
+  color:#FFF;
+  font-weight:bold;
+  font-size: 12pt;
+  transition:background .4s;
+  cursor:pointer;
+}
+
 
 .mediumbox {
   display: inline-block;
