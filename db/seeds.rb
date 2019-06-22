@@ -20,13 +20,9 @@ data.drop(1).each do |m|
   title = m[title_col]
   release_date = m[release_date_col]
   poster_path = m[poster_col]
-  if title && release_date && poster_path
-    Medium.create({
-      title: m[title_col],
-      release_date: m[release_date_col],
-      image: 'https://image.tmdb.org/t/p/w500/' + m[poster_col]
-    })
-  else
-    puts "Not all fields"
-  end
+  Medium.create({
+    title: title,
+    release_date: release_date,
+    image: poster_path && 'https://image.tmdb.org/t/p/w500/' + poster_path
+  })
 end
