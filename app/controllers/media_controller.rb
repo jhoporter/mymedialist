@@ -2,7 +2,9 @@ class MediaController < ApplicationController
   before_action :require_user, only: [:index, :show]
 
   def index
-    @media = Medium.all
+    # Uncomment this when we learn paging.
+    # @media = Medium.all
+    @media = Medium.first(50)
   end
 
   def show
