@@ -13,25 +13,21 @@
 
   <body>
       <div class="nav">
-        <div class="leftnav">
-          <ul class="leftnavitems">
-            <li><p class="title">MyMediaList</p></li>
-            <li><p class="navitems">Movies</p></li>
-            <li><p class="navitems">TV</p></li>
-          </ul>
-        </div>
-
-        <div class="rightnav">
-          <% if current_user %>
-            <ul class="rightnavitems">
-                  <li><%= link_to "Log out", logout_path, method: "delete" %></li>
-            </ul>
-          <% else %>
-            <ul class="rightnavitems">
-              <li><%= link_to "Login", 'login' %></li>
-            </ul>
-          <% end %>
-        </div>
+        <ul class="leftnav">
+          <li>MyMediaList</li>
+          <li>Movies</li>
+          <li>TV</li>
+        </ul>
+        <ul class="rightnav">
+          <li>Searchbarrrrrrrrrr</li>
+          <li>MyList</li>
+          <li>Notif</li>
+        <% if current_user %>
+          <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+        <% else %>
+          <li><%= link_to "Login", 'login' %></li>
+        </ul>
+        <% end %>
       </div>
           <%= yield %>
   </body>
