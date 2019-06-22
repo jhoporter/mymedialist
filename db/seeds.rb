@@ -1,3 +1,5 @@
+require 'csv'
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -6,15 +8,25 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Medium.delete_all
-Medium.create([
-  {
-    title: 'John Wick 3',
-    release_year: '2019',
-    image: 'https://m.media-amazon.com/images/M/MV5BMDg2YzI0ODctYjliMy00NTU0LTkxODYtYTNkNjQwMzVmOTcxXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SY1000_CR0,0,648,1000_AL_.jpg'
-  },
-  {
-    title: 'Detective Pikachu',
-    release_year: '2019',
-    image: 'https://cdn.cinematerial.com/p/500x/xptogpmr/pokemon-detective-pikachu-czech-movie-poster.jpg'
-  }
-])
+
+# This needs to be read from the root directory
+data = CSV.read(Rails.root.join('data/movies_metadata.csv'))
+headers = data[0]
+title_col = headers.index('title')
+release_date_col = headers.index('release_date')
+poster_col = headers.index('poster_path')
+
+data.drop(1).each do |m|
+  title = m[title_col]
+  release_date = m[release_date_col]
+  poster_path = m[poster_col]
+  if title && release_date && poster_path
+    Medium.create({
+      title: m[title_col],
+      release_date: m[release_date_col],
+      image: 'https://image.tmdb.org/t/p/w500/' + m[poster_col]
+    })
+  else
+    puts "Not all fields"
+  end
+end

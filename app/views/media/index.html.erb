@@ -3,7 +3,7 @@
   <% @media.each do |medium| %>
     <div class="mediumbox">
       <div class="titleyear">
-        <%= medium.title %> (<%= medium.release_year %>)
+        <%= medium.title %> (<%= medium.release_date.year %>)
       </div>
 
       <div class="mediumimage">
