@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
  *:focus {
    box-shadow: none;
  }
@@ -39,6 +40,11 @@ body {
   background: #179A96;
   width: 100%;
   min-width: 833px;
+  font-family: "Trebuchet MS", Arial;
+  font-weight: 400;
+  font-size: 15px;
+  padding-top: 2px;
+  padding-bottom: 2px;
 }
 
 .leftnav {
@@ -51,6 +57,12 @@ body {
   float:right;
   padding-right: 40px;
   padding-left: 0px;
+}
+
+.centernav {
+  display: inline-block;
+  margin-top: 11px;
+  float:right;
 }
 
 .leftnav  li {
@@ -67,9 +79,54 @@ body {
   list-style: none;
   display: inline-block;
   padding-left: 40px;
+}
+
+
+/* SEARCHBAR */
+
+.search {
+  display: inline;
+}
+
+.searchbar {
+    background-color: #fff;
+    color: black;
+    width: 250px;
+    height: 25px;
+    border: none;
+    font-family: "Trebuchet MS", Arial;
+    font-size: 1em;
+    border-bottom: white solid 2px;
+    transition: 0.3s;
 
 }
 
+.searchbar::placeholder {
+    color: white;
+    font-family: "Trebuchet MS", Arial;
+    font-size: 1em;
+    /* transition: 0.2s; */
+}
+
+.searchbar:focus {
+    width: 250px;
+    font-family: "Trebuchet MS", Arial;
+    font-size: 1em;
+    transition: 0.3s;
+    /* Stops the input box from inheriting the styling from the inputs on the request form */
+    border-bottom: white solid 2px;
+    outline: none;
+}
+
+.btn-search {
+    cursor: pointer;
+    color: white;
+    text-decoration: none !important;
+    font-family: "Segoe UI Light","Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+    font-size: 1.5em;
+    padding-top: 5px;
+    margin-right: 40px;
+}
 
 /* SIGNUP FORM */
 
@@ -132,14 +189,14 @@ textarea:focus, input:focus, select:focus {
   font-size: 20px;
 }
 
-:placeholder-shown {
+.logindiv:placeholder-shown, .signupdiv:placeholder-shown  {
   line-height: 40px;
   width: 300px;
   border: none;
   border-bottom: 1px solid #AAA;
 }
 
-:placeholder-shown:focus {
+.logindiv:placeholder-shown:focus, .signupdiv:placeholder-shown:focus {
   border: none;
   border-bottom: 2px solid #16a085
 }

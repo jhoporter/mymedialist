@@ -19,7 +19,6 @@
           <li>TV</li>
         </ul>
         <ul class="rightnav">
-          <li>Searchbarrrrrrrrrr</li>
           <li>MyList</li>
           <li>Notif</li>
         <% if current_user %>
@@ -28,6 +27,9 @@
           <li><%= link_to "Login", 'login' %></li>
         </ul>
         <% end %>
+        <div class="centernav">
+            <input id="searchBar" class="searchbar" type="text" placeholder="Search Movies and TV...">
+        </div>
       </div>
           <%= yield %>
   </body>
