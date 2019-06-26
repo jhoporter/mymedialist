@@ -17,3 +17,16 @@
 .pagination > .current {
   color: #ff0000;
 }
+
+.mediabox {
+  position: relative;
+  top: 150px;
+}
+
+.mediumbox {
+  display: inline-block;
+  border: none;
+  padding: 2px;
+  width: 200px;
+  text-align: center;
+}
