@@ -43,7 +43,7 @@ body {
   background: #179A96;
   width: 100%;
   min-width: 833px;
-  font-family: "Trebuchet MS", Arial;
+  font-family: "Prompt", sans-serif, Arial;
   font-weight: 400;
   font-size: 15px;
   padding-top: 2px;
@@ -133,7 +133,7 @@ body {
     color: #179A96;
     background: #fff;
     text-decoration: none !important;
-    font-family: "Trebuchet MS", Arial;
+    font-family: "Poppins", sans-serif;
     font-size: 1.5em;
     padding-left: 0px;
     margin-right: 0px;
@@ -205,19 +205,18 @@ input:focus {
 }
 
 ::placeholder {
-  font-size: 20px;
+  font-size: 18px;
 }
 
-textarea:focus, input:focus, select:focus {
+textarea:focus, input:focus, select:focus, .button:focus {
   box-shadow: none;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .logindiv:placeholder-shown, .signupdiv:placeholder-shown  {
   line-height: 40px;
   width: 300px;
   border: none;
-  border-bottom: 1px solid #AAA;
 }
 
 .logindiv:placeholder-shown:focus, .signupdiv:placeholder-shown:focus {
@@ -226,6 +225,7 @@ textarea:focus, input:focus, select:focus {
 }
 
 .button {
+  font-family: 'Poppins', sans-serif;
   height:55px;
   border-radius:20px;
   border:rgba(0,0,0,.3) 0px solid;
@@ -233,7 +233,8 @@ textarea:focus, input:focus, select:focus {
   background:#179A96;
   color:#FFF;
   font-weight:bold;
-  font-size: 12pt;
+  font-size: 18px;
+  box-shadow: none;
   transition:background .4s;
   cursor:pointer;
 }
