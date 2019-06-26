@@ -43,7 +43,7 @@ body {
   background: #179A96;
   width: 100%;
   min-width: 833px;
-  font-family: "Prompt", sans-serif, Arial;
+  font-family: "Prompt", sans-serif;
   font-weight: 400;
   font-size: 15px;
   padding-top: 2px;
@@ -53,12 +53,13 @@ body {
 .leftnav {
   display: inline-block;
   float: left;
+  padding-left: 150px;
 }
 
 .rightnav {
   display: inline-block;
-  float:right;
-  padding-right: 40px;
+  float: right;
+  padding-right: 130px;
   padding-left: 0px;
 }
 
