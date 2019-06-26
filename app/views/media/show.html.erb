@@ -1,3 +1,7 @@
 <%= @medium.title %>
-<%= @medium.release_date.year %>
-<%= image_tag @medium.image, style: 'height:250px' %>
+<% if @medium.release_date %>
+  <%= @medium.release_date.year %>
+<% end %>
+<% if @medium.image %>
+  <%= image_tag @medium.image, style: 'height:250px' %>
+<% end %>

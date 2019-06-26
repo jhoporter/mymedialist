@@ -1,7 +1,7 @@
 
 <div class="mediabox">
   <% @media.each do |medium| %>
-    <div class="mediumbox">
+    <div class="mediumbox" onclick="loadMedium(<%= medium.id =%>);">
       <div class="titleyear">
         <% if medium.release_date %>
           <%= medium.title %> (<%= medium.release_date.year %>)
@@ -18,3 +18,8 @@
   <% end %>
   <%= will_paginate @views %>
 </div>
+<script>
+  function loadMedium(id) {
+      window.location = '/media/' + encodeURI(id);
+  }
+</script>
