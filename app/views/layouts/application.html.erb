@@ -29,10 +29,32 @@
         </ul>
         <div class="centernav">
             <input id="searchBar" class="searchbar" type="text" placeholder="Search Movies and TV...">
-            <button id="btnSearch" class="btn-search"><i class="fa fa-search searchicon"></i></button>
+            <button id="btnSearch" class="btn-search" onclick="search()">
+              <i class="fa fa-search searchicon"></i>
+            </button>
         </div>
       </div>
     <% end %>
-    <%= yield %>
+    <div class="contentWrapper">
+      <%= yield %>
+    <div>
+    <script>
+      function search() {
+        term = document.getElementById('searchBar').value
+        window.location = '/media?term=' + encodeURI(term);
+      }
+
+      var searchBar = document.getElementById("searchBar");
+      // Execute a function when the user releases a key on the keyboard
+      searchBar.addEventListener("keyup", function(event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+          // Cancel the default action, if needed
+          event.preventDefault();
+          // Trigger the button element with a click
+          document.getElementById("btnSearch").click();
+        }
+      });
+    </script>
   </body>
 </html>

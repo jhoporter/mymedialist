@@ -4,7 +4,7 @@ class MediaController < ApplicationController
   def index
     # Uncomment this when we learn paging.
     # @media = Medium.all
-    @media = Medium.first(50)
+    @media = Medium.search(params[:term], params[:page])
   end
 
   def show
