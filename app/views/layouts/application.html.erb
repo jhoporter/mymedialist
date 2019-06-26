@@ -35,7 +35,9 @@
         </div>
       </div>
     <% end %>
-    <%= yield %>
+    <div class="contentWrapper">
+      <%= yield %>
+    <div>
     <script>
       function search() {
         term = document.getElementById('searchBar').value
