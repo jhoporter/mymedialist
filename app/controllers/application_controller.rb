@@ -13,4 +13,8 @@ class ApplicationController < ActionController::Base
     redirect_to '/' if current_user
   end
 
+  def redirect_to_dashboard_if_logged_in
+    redirect_to '/dashboard' if current_user
+  end
+
 end
