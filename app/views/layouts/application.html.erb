@@ -10,6 +10,7 @@
   </head>
 
   <body>
+    <% unless params[:controller] == "pages" && params[:action] == "home" %>
       <div class="nav">
         <ul class="leftnav">
           <li>MyMediaList</li>
@@ -30,6 +31,7 @@
             <button id="btnSearch" class="btn-search"><i class="fa fa-search searchicon"></i></button>
         </div>
       </div>
-          <%= yield %>
+    <% end %>
+    <%= yield %>
   </body>
 </html>
