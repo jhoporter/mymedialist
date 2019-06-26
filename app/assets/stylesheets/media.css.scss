@@ -1,3 +1,19 @@
 // Place all the styles related to the Media controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.titleyear {
+  color: #000000;
+}
+
+.pagination {
+  color: #333333;
+}
+
+.pagination > a {
+  color: #333333;
+}
+
+.pagination > .current {
+  color: #ff0000;
+}

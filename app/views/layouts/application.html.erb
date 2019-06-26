@@ -29,10 +29,18 @@
         </ul>
         <div class="centernav">
             <input id="searchBar" class="searchbar" type="text" placeholder="Search Movies and TV...">
-            <button id="btnSearch" class="btn-search"><i class="fa fa-search searchicon"></i></button>
+            <button id="btnSearch" class="btn-search" onclick="search()">
+              <i class="fa fa-search searchicon"></i>
+            </button>
         </div>
       </div>
     <% end %>
     <%= yield %>
+    <script>
+      function search() {
+        term = document.getElementById('searchBar').value
+        window.location = '/media?term=' + encodeURI(term);
+      }
+    </script>
   </body>
 </html>
