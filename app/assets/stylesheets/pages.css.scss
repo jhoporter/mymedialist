@@ -18,6 +18,27 @@
   background-size: cover;
 }
 
+.welcomelogin {
+  z-index: 2;
+  position: relative;
+  float: right;
+  top: -30px;
+  background: #DC1BB5;
+  width: 120px;
+  height: 50px;
+  background-size: cover;
+  border-radius: 20px;
+}
+
+.login {
+  color: #fff;
+  top: 0px;
+  position: relative;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+}
+
 .welcomeboard {
   position: absolute;
   margin-left: auto;
@@ -68,13 +89,13 @@
   top: 0px;
   left: 0px;
   background: #DC1BB5;
-  width: 190px;
+  width: 190px;  left: 0px;
   height: 50px;
   background-size: cover;
   border-radius: 20px;
 }
 
-.getstartedp {
+.signup {
   color: #fff;
   top: 17px;
   position: relative;
@@ -83,6 +104,6 @@
   letter-spacing: 0.1em;
 }
 
-.getstarted a {
+.getstarted a, .welcomelogin a {
   text-decoration: none;
 }
