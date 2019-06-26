@@ -2,6 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  background: #e6e6e6;
+}
+
+
+
 .titleyear {
   color: #000000;
 }
@@ -20,15 +26,32 @@
 
 .mediacontainer {
   position: relative;
-  top: 150px;
+  display: inline-block;
+  margin: 20px;
+  top: 100px;
 }
 
 .mediumbox {
   display: inline-block;
-  padding: 2px;
-  width: 200px;
+  overflow: hidden;
+  background: #fff;
+  margin: 10px;
+  padding: 5px;
+  width: 230px;
+  height: 300px;
   text-align: center;
   cursor: pointer;
   font-family: "Prompt", sans-serif;
   font-size: 13px;
+}
+
+.titleyear {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-top: 7px;
+}
+
+.pagination {
+  font-family: "Prompt", sans-serif;
 }
