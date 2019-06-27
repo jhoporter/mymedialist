@@ -1,6 +1,11 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.contentWrapper {
+  text-align: center;
+  position: relative;
+  top: 60px;
+}
 
 .dashboard {
   position: relative;
@@ -37,6 +42,7 @@
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
   letter-spacing: 0.1em;
+  text-align: center;
 }
 
 .welcomeboard {

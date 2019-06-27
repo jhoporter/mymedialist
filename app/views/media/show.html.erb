@@ -1,9 +1,18 @@
-<div class="mediumpage">
-<%= @medium.title %>
-<% if @medium.release_date %>
-  <%= @medium.release_date.year %>
-<% end %>
-<% if @medium.image %>
-  <%= image_tag @medium.image, style: 'height:250px' %>
-<% end %>
+<div class="contentWrapper">
+
+  <div class="mediumpage">
+    <div class="showtitleyear">
+    <%= @medium.title %>
+    <% if @medium.release_date %>
+      <%= @medium.release_date.year %>
+    <% end %>
+    </div>
+    <div class="showmediumimage">
+    <% if @medium.image %>
+      <%= image_tag @medium.image, style: 'height:400px' %>
+    <% end %>
+    </div>
+
+  </div>
+
 </div>

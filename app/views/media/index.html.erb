@@ -1,25 +1,28 @@
+<div class="contentWrapper">
 
-<div class="mediacontainer">
-  <% @media.each do |medium| %>
-    <div class="mediumbox" onclick="loadMedium(<%= medium.id =%>);">
-      <div class="titleyear">
-        <% if medium.release_date %>
-          <%= medium.title %> (<%= medium.release_date.year %>)
-        <% else %>
-          <%= medium.title %>
-        <% end %>
+  <div class="mediacontainer">
+    <% @media.each do |medium| %>
+      <div class="mediumbox" onclick="loadMedium(<%= medium.id =%>);">
+        <div class="titleyear">
+          <% if medium.release_date %>
+            <%= medium.title %> (<%= medium.release_date.year %>)
+          <% else %>
+            <%= medium.title %>
+          <% end %>
+        </div>
+        <div class="mediumimage">
+          <% if medium.image %>
+            <%= image_tag medium.image, style: 'height: 250px;width: 170px;' %>
+          <% end %>
+        </div>
       </div>
-      <div class="mediumimage">
-        <% if medium.image %>
-          <%= image_tag medium.image, style: 'height: 250px;width: 170px;' %>
-        <% end %>
-      </div>
-    </div>
-  <% end %>
-  <%= will_paginate @views %>
+    <% end %>
+    <%= will_paginate @views %>
+  </div>
+  <script>
+    function loadMedium(id) {
+        window.location = '/media/' + encodeURI(id);
+    }
+  </script>
+
 </div>
-<script>
-  function loadMedium(id) {
-      window.location = '/media/' + encodeURI(id);
-  }
-</script>
